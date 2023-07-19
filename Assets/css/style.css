@@ -1,3 +1,23 @@
+/* Header styles */
+header {
+  position: relative;
+}
+
+/* Add a background image with opacity for the header */
+.header-bg-image {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  width: 200px;
+  height: 200px;
+  background-image: url('/Assets/images/Dolly_working.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  opacity: 0.8; /* Adjust the opacity value to make the image semi-transparent (0.0 - 1.0) */
+  z-index: -1; /* Push the background element behind other header content */
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -18,6 +38,7 @@ textarea {
 
 .time-block {
   border-radius: 15px;
+  opacity: 0.8;
 }
 
 .row {
@@ -31,17 +52,17 @@ textarea {
 }
 
 .past {
-  background-color: #68aff6;
+  background-color: #a6d1fb;
   color: white;
 }
 
 .present {
-  background-color: #ff61d5;
+  background-color: #f18888;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #43ae7e;
   color: white;
 }
 
