@@ -1,8 +1,8 @@
-# k8s workday scheduler
+# K8's Workday Scheduler
 ## Description
-I made this application in order to maximize my workday efficiency. As an artist with multiple projects underway in different stages with differenet collaborators, I needed something flexible and interactive that I could adjust if and when unexpected rescheduling occurs. Aesthtics inspired by Dolly Parton.
+I made this application in order to maximize my workday efficiency. As an artist with multiple projects underway--in different stages, with differenet collaborators--I needed something flexible and interactive that I could adjust if and when unexpected rescheduling occurs. I also wanted to color code the application so that I could clearly see what I should be doing right now, what I have already done and what I will be doing later. Aesthetics inspired by Dolly Parton's 9-5.
 
-💝 [Test your knowledge with my JavaScript quiz here](https://k8sterchi.github.io/k8s-scheduler/) 💝
+💝 [Check out my workday schedule application here](https://k8sterchi.github.io/k8s-scheduler/) 💝
 
 ## Application Preview
 
@@ -37,8 +37,10 @@ WHEN I refresh the page
 
 THEN the saved events persist
 ## Resources
-I screenshot the image of Dolly from this article https://www.theguardian.com/commentisfree/2014/oct/27/five-myths-about-career-women and cropped it into a square.
+I screenshot the image of Dolly from this [article](https://www.theguardian.com/commentisfree/2014/oct/27/five-myths-about-career-women) and cropped it into a square.
 
-I used this started code to begin making my scheduler appliction. 
-## Inspiration
+[I used this started code to begin making my scheduler appliction.](https://github.com/coding-boot-camp/crispy-octo-meme)
+
+[I decided to start practicing using const/let instead of var.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables)
+## More Inspiration
 ![Dolly inspired aesthetic](./Assets/images/Dolly_oddJobs.png)
