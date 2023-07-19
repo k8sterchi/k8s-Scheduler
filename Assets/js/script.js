@@ -2,14 +2,14 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  // Function to update the time block classes based on the current hour
+// Function to update the time block classes based on the current hour
   function updateTimeBlocks() {
     const currentHour = dayjs().hour(); // Get the current hour (0-23) using dayjs
 
-  // Log the current hour to the console
+// Log the current hour to the console
     console.log("Current Hour:", currentHour);
 
-  // Loop through each time block
+// Loop through each time block
     $(".time-block").each(function () {
       const hour = parseInt($(this).attr("id").split("-")[1]); // Extract the hour from the id
       if (hour < currentHour) {
@@ -21,40 +21,53 @@ $(function () {
       }
     });
   }
+// Function to display the current date in the header
+  function displayCurrentDate() {
+    const currentDate = dayjs().format("dddd, MMMM D, YYYY"); // Get the current date in the desired format
+    $("#currentDay").text(currentDate); // Update the #currentDay element with the current date
+  }
 
-   // Function to load user input from localStorage
-   function loadUserInput() {
+// Call the updateTimeBlocks function on page load
+  $(document).ready(function () {
+    updateTimeBlocks();
+    displayCurrentDate(); // Call the function to display the current date in the header
+
+// Call the updateTimeBlocks function every minute to keep the styles up-to-date
+    setInterval(updateTimeBlocks, 60000); // 60000 milliseconds = 1 minute
+  });
+
+// Function to load user input from localStorage
+  function loadUserInput() {
     $(".time-block").each(function () {
       const hourId = $(this).attr("id"); // Get the "hour-x" id of the time-block
       const savedDescription = localStorage.getItem(hourId); // Retrieve the saved description from localStorage
 
-      // Set the value of the corresponding textarea element
+// Set the value of the corresponding textarea element
       $(this).find(".description").val(savedDescription);
     });
   }
 
-  // Call the updateTimeBlocks function on page load
+// Call the updateTimeBlocks function on page load
   $(document).ready(function () {
     updateTimeBlocks();
 
-  // Call the updateTimeBlocks function every minute to keep the styles up-to-date
+// Call the updateTimeBlocks function every minute to keep the styles up-to-date
     setInterval(updateTimeBlocks, 60000); // 60000 milliseconds = 1 minute
- // Load user input from localStorage on page load
- loadUserInput();
+// Load user input from localStorage on page load
+    loadUserInput();
   });
-  // Click listener for the save buttons--
-  // In the click listener function, $(this) refers to the clicked save button. 
-  // Using the siblings() method, traverse DOM to find the sibling element with 
-  // the class description, which is the textarea containing the user input. 
-  // then, use the val() method to get the value of the textarea, which is the user input.
+// Click listener for the save buttons--
+// In the click listener function, $(this) refers to the clicked save button.
+// Using the siblings() method, traverse DOM to find the sibling element with
+// the class description, which is the textarea containing the user input.
+// then, use the val() method to get the value of the textarea, which is the user input.
   $(".saveBtn").on("click", function () {
     const hourId = $(this).closest(".time-block").attr("id"); // Get the "hour-x" id of the containing time-block
     const userInput = $(this).siblings(".description").val(); // Get the user input from the textarea
 
-    // Save the user input to localStorage using the hourId as the key
+// Save the user input to localStorage using the hourId as the key
     localStorage.setItem(hourId, userInput);
 
     console.log("User input saved:", userInput);
   });
 });
-

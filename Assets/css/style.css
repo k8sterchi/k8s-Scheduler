@@ -3,21 +3,32 @@ header {
   position: relative;
 }
 
-/* Add a background image with opacity for the header */
+#currentDay {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  color: #c32424;
+  font-weight: 600;
+  background-color: #a6d1fb80;
+  width: 200px;
+  
+}
+/* header background image  */
 .header-bg-image {
   position: fixed;
   top: 1%;
   right: 1%;
   width: 200px;
   height: 200px;
-  background-image: url('/Assets/images/Dolly_working.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-image: url('/Assets/images/Dolly_working.png'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top right;
-  opacity: 0.8; /* Adjust the opacity value to make the image semi-transparent (0.0 - 1.0) */
-  z-index: -1; /* Push the background element behind other header content */
+  opacity: 0.8; 
+  z-index: -1; 
 }
 
+/* Body styles */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
