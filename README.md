@@ -32,3 +32,8 @@ THEN the saved events persist
 
 ## Inspiration
 ![Dolly inspired aesthetic](./Assets/images/Dolly_oddJobs.png)
+
+## Resources
+I screenshot the image of Dolly from this article https://www.theguardian.com/commentisfree/2014/oct/27/five-myths-about-career-women and cropped it into a square.
+
+I used this started code to begin making my scheduler appliction. 
