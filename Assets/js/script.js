@@ -29,6 +29,15 @@ $(function () {
     // Call the updateTimeBlocks function every minute to keep the styles up-to-date
     setInterval(updateTimeBlocks, 60000); // 60000 milliseconds = 1 minute
   });
+  // Click listener for the save buttons
+  $(".saveBtn").on("click", function () {
+    const description = $(this).siblings(".description").val(); // Get the value from the textarea
+    const hourId = $(this).parent().attr("id"); // Get the "hour-x" id of the time-block
+    localStorage.setItem(hourId, description); // Use the "hour-x" id as the key to save the description in local storage
+
+    // Log the saved data to the console
+    console.log(`Saved: ${description}`);
+  });
 });
 
 // TODO: Add a listener for click events on the save button. This code should
