@@ -42,5 +42,9 @@ I screenshot the image of Dolly from this [article](https://www.theguardian.com/
 [I used this started code to begin making my scheduler appliction.](https://github.com/coding-boot-camp/crispy-octo-meme)
 
 [I decided to start practicing using const/let instead of var.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables)
+
+I pair-programmed with my friend and I also worked with [chatGPT](https://chat.openai.com/).
+
+
 ## More Inspiration
 ![Dolly inspired aesthetic](./Assets/images/Dolly_oddJobs.png)
